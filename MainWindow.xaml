@@ -1,0 +1,57 @@
+<Window x:Class="ShapesDrawing.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Рисование геометрических фигур" Height="560" Width="960"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="700"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Canvas x:Name="Scene" Background="White" Width="680" Height="480"/>
+        </Border>
+
+        <StackPanel Grid.Column="1" Margin="15,0,0,0">
+
+            <TextBlock Text="Треугольник" FontWeight="Bold" Margin="0,0,0,5"/>
+            <Button x:Name="BtnRandomTriangle" Content="Случайный треугольник" Margin="0,0,0,8" Click="BtnRandomTriangle_Click"/>
+
+            <TextBlock Text="Точки (X,Y):" Margin="0,0,0,2"/>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,4">
+                <TextBox x:Name="TxtTX1" Width="35" Text="50"/>
+                <TextBox x:Name="TxtTY1" Width="35" Text="50" Margin="3,0,0,0"/>
+                <TextBox x:Name="TxtTX2" Width="35" Text="150" Margin="6,0,0,0"/>
+                <TextBox x:Name="TxtTY2" Width="35" Text="50" Margin="3,0,0,0"/>
+                <TextBox x:Name="TxtTX3" Width="35" Text="100" Margin="6,0,0,0"/>
+                <TextBox x:Name="TxtTY3" Width="35" Text="150" Margin="3,0,0,0"/>
+            </StackPanel>
+            <Button x:Name="BtnManualTriangle" Content="Добавить треугольник по точкам" Margin="0,0,0,18" Click="BtnManualTriangle_Click"/>
+
+            <TextBlock Text="Прямоугольник / Квадрат" FontWeight="Bold" Margin="0,0,0,5"/>
+            <Button x:Name="BtnRandomRectangle" Content="Случайный прямоугольник" Margin="0,0,0,5" Click="BtnRandomRectangle_Click"/>
+            <Button x:Name="BtnRandomSquare" Content="Случайный квадрат" Margin="0,0,0,8" Click="BtnRandomSquare_Click"/>
+
+            <TextBlock Text="Начальная точка, ширина, высота:" Margin="0,0,0,2"/>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,4">
+                <TextBox x:Name="TxtRX" Width="35" Text="50"/>
+                <TextBox x:Name="TxtRY" Width="35" Text="50" Margin="3,0,0,0"/>
+                <TextBox x:Name="TxtRW" Width="35" Text="100" Margin="6,0,0,0"/>
+                <TextBox x:Name="TxtRH" Width="35" Text="60" Margin="3,0,0,0"/>
+            </StackPanel>
+            <Button x:Name="BtnManualRectangle" Content="Добавить прямоугольник (заданный)" Margin="0,0,0,18" Click="BtnManualRectangle_Click"/>
+
+            <TextBlock Text="Перемещение фигур" FontWeight="Bold" Margin="0,0,0,5"/>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,4">
+                <TextBlock Text="dX:" VerticalAlignment="Center"/>
+                <TextBox x:Name="TxtDX" Width="40" Text="10" Margin="3,0,10,0"/>
+                <TextBlock Text="dY:" VerticalAlignment="Center"/>
+                <TextBox x:Name="TxtDY" Width="40" Text="10" Margin="3,0,0,0"/>
+            </StackPanel>
+            <Button x:Name="BtnMoveAll" Content="Переместить все фигуры" Margin="0,4,0,18" Click="BtnMoveAll_Click"/>
+
+            <Button x:Name="BtnClear" Content="Очистить сцену" Click="BtnClear_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
