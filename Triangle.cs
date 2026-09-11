@@ -4,9 +4,6 @@ using System.Windows.Shapes;
 
 namespace ShapesDrawing
 {
-    /// <summary>
-    /// Класс треугольника. Агрегирует три точки Point2D.
-    /// </summary>
     public class Triangle : IShape
     {
         public Point2D P1 { get; private set; }
