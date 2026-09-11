@@ -6,7 +6,6 @@ namespace ShapesDrawing
 {
     public partial class MainWindow : Window
     {
-        // Список всех фигур, добавленных на сцену
         private readonly List<IShape> shapes = new List<IShape>();
         private readonly Random rnd = new Random();
 
@@ -18,7 +17,6 @@ namespace ShapesDrawing
         private int RandomX() => rnd.Next(0, (int)Scene.Width);
         private int RandomY() => rnd.Next(0, (int)Scene.Height);
 
-        // Полная перерисовка сцены по текущему списку фигур
         private void RedrawAll()
         {
             Scene.Children.Clear();

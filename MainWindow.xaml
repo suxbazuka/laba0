@@ -29,7 +29,7 @@
             </StackPanel>
             <Button x:Name="BtnManualTriangle" Content="Добавить треугольник по точкам" Margin="0,0,0,18" Click="BtnManualTriangle_Click"/>
 
-            <TextBlock Text="Прямоугольник /Квадрат" FontWeight="Bold" Margin="0,0,0,5"/>
+            <TextBlock Text="Прямоугольник/Квадрат" FontWeight="Bold" Margin="0,0,0,5"/>
             <Button x:Name="BtnRandomRectangle" Content="Случайный прямоугольник" Margin="0,0,0,5" Click="BtnRandomRectangle_Click"/>
             <Button x:Name="BtnRandomSquare" Content="Случайный квадрат" Margin="0,0,0,8" Click="BtnRandomSquare_Click"/>
 
