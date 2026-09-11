@@ -4,10 +4,6 @@ using System.Windows.Shapes;
 
 namespace ShapesDrawing
 {
-    /// <summary>
-    /// Класс четырёхугольника (прямоугольник или квадрат, если Width == Height).
-    /// Задаётся начальной точкой и величинами длины (Width) и ширины (Height).
-    /// </summary>
     public class Quadrilateral : IShape
     {
         public Point2D Start { get; private set; }
@@ -27,7 +23,6 @@ namespace ShapesDrawing
             RecalculatePoints();
         }
 
-        // Пересчитывает остальные три угла на основе начальной точки и размеров
         private void RecalculatePoints()
         {
             P2 = new Point2D(Start.X + Width, Start.Y);
